@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Navbar Section -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="logo.png" alt="Logo">
+            </div>
+            <div class="links">
+                <a href="#home">Home</a>
+                <a href="#skills">My Skills</a>
+                <a href="#services">Services</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="contact-button">
+                <button onclick="location.href='#contact'">Contact Me</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="content">
+            <div class="main-content">
+                <h1>Welcome to My <span>Portfolio</span></h1>
+                <p>Saya seorang pengembang web yang bersemangat dan fokus pada pembuatan situs web yang indah dan
+                    fungsional.</p>
+                <div class="buttons">
+                    <a href="#projects"><button>View Projects</button></a>
+                    <a href="#contact"><button>Contact Me</button></a>
+                </div>
+            </div>
+            <div class="image">
+                <img src="profile-image.png" alt="Profile Image">
+                <h3 class="name">Muhamad Syamsul Hidayat</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Skills Section -->
+    <section id="skills" class="section-skills">
+        <h2>My Skills</h2>
+        <div class="skills-content">
+            <p>Here are my skills presented in percentage:</p>
+            <div class="skills-list">
+                <div class="skill-item">
+                    <h3>HTML</h3>
+                    <div class="progress">
+                        <div class="progress-bar" data-skill-level="90%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <h3>CSS</h3>
+                    <div class="progress">
+                        <div class="progress-bar" data-skill-level="85%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <h3>JavaScript</h3>
+                    <div class="progress">
+                        <div class="progress-bar" data-skill-level="80%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <h3>React</h3>
+                    <div class="progress">
+                        <div class="progress-bar" data-skill-level="75%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Services Section -->
+    <section id="services"
+     class="section-services">
+        <h2>My Services</h2>
+        <p>Explore the range of services I offer to bring your ideas to life.</p>
+        <div class="service-grid">
+            <div class="service-item">
+                <div class="icon"><i class="fas fa-code"></i></div>
+                <h3>Web Development</h3>
+                <p>Membangun situs web yang responsif dan berkinerja tinggi dengan teknologi modern.</p>
+            </div>
+            <div class="service-item">
+                <div class="icon"><i class="fas fa-pencil-alt"></i></div>
+                <h3>UI/UX Design</h3>
+                <p>Membuat antarmuka yang intuitif dan menarik secara visual untuk pengalaman pengguna yang lancar.</p>
+            </div>
+            <div class="service-item">
+                <div class="icon"><i class="fas fa-chart-line"></i></div>
+                <h3>SEO Optimization</h3>
+                <p>Meningkatkan peringkat dan visibilitas situs web Anda di mesin pencari dengan praktik terbaik SEO.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-projects">
+        <h2>My Projects</h2>
+        <div class="projects-grid">
+            <div class="project-item">
+                <img src="project1.png" alt="Project 1">
+                <h3>Project 1</h3>
+                <p>ini adalah project website ikatan pelajar nahdlatul wathan (IPNW).</p>
+            </div>
+            <div class="project-item">
+                <img src="project2.png" alt="Project 2">
+                <h3>Project 2</h3>
+                <p>ini adalah project website pemesanan tiket tour and travel yang bernama alamart garden.</p>
+            </div>
+            <div class="project-item">
+                <img src="project3.png" alt="Project 3">
+                <h3>Project 3</h3>
+                <p>ini adalah project website organisasi ikatan remaja pengengat.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="social-links">
+            <h3>Connect with me:</h3>
+            <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
+            </a>
+            <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+                    alt="Facebook" />
+            </a>
+            <a href="https://www.twitter.com" target="_blank" class="social-icon">
+                <img src="https://upload.wikimedia.org/wikipedia/en/6/60/Twitter_Logo_as_of_2021.svg" alt="Twitter" />
+            </a>
+        </div>
+    </section>
+
+</body>
+
+</html>

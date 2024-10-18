@@ -1,0 +1,647 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    /* Menggunakan font modern */
+    background-color: #f4f4f4;
+    /* Warna latar belakang yang lebih lembut */
+    color: #333;
+    /* Warna teks yang kontras */
+}
+
+/* Navbar Styles */
+nav {
+    z-index: 4;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 10vh;
+    background: rgba(255, 255, 255, 0.9);
+    /* Latar belakang transparan */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Bayangan halus */
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-container .logo img {
+    width: 70px;
+    height: auto;
+}
+
+.nav-container .links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-container .links a {
+    font-size: 1.2rem;
+    color: #333;
+    text-decoration: none;
+    margin: 0 20px;
+    position: relative;
+    /* Untuk efek hover */
+    padding: 5px;
+    /* Ruang tambahan untuk efek hover */
+}
+
+.nav-container .links a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fca61f;
+    /* Garis bawah */
+    transition: width 0.3s;
+    /* Transisi untuk garis bawah */
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+
+.nav-container .links a:hover::after {
+    width: 100%;
+    /* Garis bawah akan mengembang saat hover */
+}
+
+nav button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #fca61f, #f7b93a);
+    /* Gradasi warna */
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Bayangan untuk kedalaman */
+}
+
+nav button:hover {
+    background: linear-gradient(135deg, #f7b93a, #fca61f);
+    /* Mengubah urutan gradasi saat hover */
+    transform: translateY(-2px);
+    /* Efek mengangkat saat hover */
+}
+
+/* Section Styles */
+section {
+    width: 100%;
+    padding: 80px 20px;
+    /* Memberikan ruang lebih untuk bagian */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin: 20px 0;
+    color: #fca61f;
+    /* Warna judul */
+    text-transform: uppercase;
+    /* Mengubah teks menjadi huruf kapital */
+    letter-spacing: 2px;
+    /* Spasi antar huruf untuk kesan modern */
+}
+
+section p {
+    font-size: 1.1rem;
+    text-align: center;
+    margin: 10px 0 30px;
+    max-width: 600px;
+    /* Maksimal lebar untuk teks */
+}
+
+/* Content Layout */
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    /* Memungkinkan elemen untuk wrap */
+    width: 100%;
+    max-width: 1200px;
+    /* Memastikan lebar konten tidak melebihi batas */
+}
+
+.main-content {
+    flex: 1;
+    max-width: 50%;
+}
+
+.main-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.main-content span {
+    color: #fca61f;
+}
+
+.main-content p {
+    margin: 20px 0;
+    font-size: 1.1rem;
+}
+
+.buttons {
+    margin: 20px 0;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #fca61f, #f7b93a);
+    /* Gradasi warna */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.buttons button:hover {
+    background: linear-gradient(135deg, #f7b93a, #fca61f);
+    transform: translateY(-2px);
+    /* Efek mengangkat saat hover */
+}
+
+/* Image Styles */
+.content {
+    display: flex;
+    justify-content: space-between;
+    /* Memisahkan konten di kedua sisi */
+    align-items: center;
+    /* Menyelaraskan gambar dan nama di tengah secara vertikal */
+    width: 100%;
+    max-width: 1200px;
+    /* Mengatur lebar maksimum konten */
+    margin: auto;
+    /* Pusatkan konten */
+    padding: 0 20px;
+    /* Padding horizontal */
+}
+
+.image {
+    display: flex;
+    /* Menggunakan Flexbox untuk gambar dan nama */
+    flex-direction: column;
+    /* Menempatkan gambar di atas nama */
+    align-items: center;
+    /* Memusatkan konten di dalam gambar */
+    max-width: 40%;
+    /* Lebar maksimum gambar */
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 20px #fca61f);
+    border-radius: 10px;
+    /* Sudut melingkar untuk gambar */
+}
+
+.name {
+    font-size: 1.5rem;
+    /* Ukuran font untuk nama */
+    margin-top: 10px;
+    /* Jarak antara gambar dan nama */
+    color: #333;
+    /* Warna teks nama */
+    font-weight: bold;
+    /* Tebalkan nama */
+
+}/* My Skills Section */
+.section-skills {
+    background-color: #f9fbfd;
+    padding: 80px 20px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 60px;
+}
+
+.section-skills h2 {
+    font-size: 2.8rem;
+    color: #34495e;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    position: relative;
+}
+
+.section-skills h2::after {
+    content: '';
+    display: block;
+    height: 4px;
+    width: 70px;
+    background: #fca61f;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.skills-content p {
+    font-size: 1.2rem;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Skill Item */
+.skill-item {
+    text-align: left;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.skill-item h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Progress Bar Container */
+.progress {
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    height: 40px;
+    margin-top: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Progress Bar */
+.progress-bar {
+    background-color: #fca61f;
+    height: 100%;
+    border-radius: 20px;
+    width: 0; /* Set default width to 0 */
+    transition: width 2s ease-in-out; /* Add animation for width */
+    text-align: right;
+    line-height: 40px; /* Center text vertically */
+    color: #fff;
+    padding-right: 10px; /* Add space to the right */
+    font-weight: bold;
+}
+
+/* Set different widths for each skill */
+.skill-item:nth-child(1) .progress-bar {
+    width: 90%; /* HTML */
+}
+
+.skill-item:nth-child(2) .progress-bar {
+    width: 85%; /* CSS */
+}
+
+.skill-item:nth-child(3) .progress-bar {
+    width: 80%; /* JavaScript */
+}
+
+.skill-item:nth-child(4) .progress-bar {
+    width: 75%; /* React */
+}
+
+/* Set percentages as labels */
+.progress-bar::after {
+    content: attr(data-skill-level); /* Use attribute for skill level */
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    .progress-bar {
+        line-height: 30px;
+    }
+    .progress-bar::after {
+        font-size: 1rem;
+        right: 5px;
+    }
+}
+
+
+/* My Services */
+.section-services {
+    background: linear-gradient(135deg, #eaeff1 0%, #fca61f 100%);
+    padding: 80px 20px;
+    color: #333;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.section-services h2 {
+    font-size: 3rem;
+    color: #fca61f;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+}
+
+.section-services h2::after {
+    content: '';
+    display: block;
+    height: 4px;
+    width: 50px;
+    background: #fca61f;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.section-services p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.service-item {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    /* Tambahkan untuk efek */
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    /* Angkat saat hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.service-item .icon {
+    font-size: 4rem;
+    color: #fca61f;
+    margin-bottom: 20px;
+    transition: color 0.3s;
+}
+
+.service-item:hover .icon {
+    color: #333;
+    /* Ubah warna ikon saat hover */
+}
+
+.service-item h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Tambahkan transisi smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* My Projects */
+.section-projects {
+    background-color: #f2f6fc;
+    /* Latar belakang biru pastel */
+    padding: 100px 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin: 40px 0;
+    text-align: center;
+}
+
+.section-projects h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    font-weight: 700;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-item {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    position: relative;
+}
+
+.project-item:hover {
+    transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
+    /* Efek hover dengan sedikit rotasi 3D */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    /* Bayangan lebih dalam */
+}
+
+.project-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
+    border-bottom: 4px solid #2980b9;
+    /* Garis bawah dengan warna biru kontras */
+}
+
+.project-item:hover img {
+    transform: scale(1.1) rotate(2deg);
+    /* Efek zoom dan rotasi gambar saat hover */
+}
+
+.project-item h3 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin: 15px 0;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: color 0.3s ease-in-out;
+}
+
+.project-item:hover h3 {
+    color: #3498db;
+    /* Warna biru cerah saat hover */
+}
+
+.project-item p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    padding: 0 20px 20px;
+    line-height: 1.7;
+    transition: color 0.3s ease-in-out;
+}
+
+.project-item:hover p {
+    color: #34495e;
+    /* Warna teks deskripsi menjadi lebih gelap saat hover */
+}
+
+.project-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.1));
+    z-index: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.project-item:hover::after {
+    opacity: 0;
+    /* Menghilangkan efek overlay saat hover */
+}
+
+/* Contact Me */
+.section-contact {
+    background-color: #f0f8ff;
+    /* Warna latar belakang biru sangat lembut */
+    padding: 60px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    /* Memberikan jarak antara bagian */
+    text-align: center;
+    /* Rata tengah untuk semua teks */
+}
+
+.section-contact h2 {
+    color: #fca61f;
+    /* Warna judul */
+    margin-bottom: 20px;
+}
+
+.section-contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    /* Pusatkan form */
+}
+
+.section-contact input,
+.section-contact textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+    /* Efek saat fokus */
+}
+
+.section-contact input:focus,
+.section-contact textarea:focus {
+    border-color: #fca61f;
+    /* Warna border saat fokus */
+}
+
+.section-contact button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #fca61f;
+    /* Warna tombol */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    /* Efek hover */
+}
+
+.section-contact button:hover {
+    background-color: white;
+    /* Warna tombol saat hover */
+    color: #fca61f;
+    border: 2px solid #fca61f;
+    /* Garis border saat hover */
+    transform: scale(1.05);
+    /* Membesar saat hover */
+}
+
+/* Styling untuk media sosial */
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.social-links h3 {
+    margin-right: 20px;
+}
+
+.social-icon {
+    margin: 0 10px;
+}
+
+.social-icon img {
+    width: 40px;
+    /* Ukuran logo */
+    height: auto;
+    transition: transform 0.2s;
+    /* Efek saat hover */
+}
+
+.social-icon img:hover {
+    transform: scale(1.1);
+    /* Membesar saat hover */
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
